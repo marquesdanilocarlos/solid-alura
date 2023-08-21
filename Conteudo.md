@@ -9,4 +9,7 @@
     utilizando-a. Ao realizar uma alteração nela, impactará todas as outras que estão utilizando ela. Recomendado não
     depender da classe pai como concreta, mas sim de uma abstração
     - Quando uma classe possui muitas checagens e verificações, nunca vai parar de crescer e isso é um sinal que podem ser
-    criadas novas classes que possuem a garantia que não vão quebrar. 
+    criadas novas classes que possuem a garantia que não vão quebrar.
+
+3 - Princípio de substituição de Liskov (Liskov Substitution Principle)
+    - Deve-se fazer com que as classes filhas respeitem qualquer definição imposta pela classe base.

@@ -14,6 +14,8 @@ class Video
 
     protected DateInterval $duration;
 
+    protected string $url = "http://videos.alura.com.br/";
+
     public function __construct(string $name)
     {
         $this->name = $name;
@@ -33,6 +35,6 @@ class Video
 
     public function getUrl(): string
     {
-        return 'http://videos.alura.com.br/' . http_build_query(['name' => $this->name]);
+        return $this->url . http_build_query(['name' => $this->name]);
     }
 }

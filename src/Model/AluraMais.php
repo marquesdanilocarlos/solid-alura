@@ -5,6 +5,7 @@ namespace Alura\Solid\Model;
 class AluraMais extends Video implements ScoreInterface
 {
     private string $category;
+    protected string $url = "http://mais.alura.com.br/";
 
     public function __construct(string $name, string $category)
     {
@@ -14,7 +15,7 @@ class AluraMais extends Video implements ScoreInterface
 
     public function getUrl(): string
     {
-        return str_replace(' ', '-', strtolower($this->category));
+        return $this->url . str_replace(' ', '-', strtolower($this->category));
     }
 
     public function getScore(): float
