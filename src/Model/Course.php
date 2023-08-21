@@ -6,6 +6,8 @@ class Course
 {
     private string $name;
     private array $videos;
+
+    /** @var Feedback[] */
     private array $feedbacks;
 
     public function __construct(string $name)
@@ -15,18 +17,14 @@ class Course
         $this->feedbacks = [];
     }
 
-    public function setFeedback(int $grade, ?string $testimony): void
+    public function addFeedback(Feedback $feedback): void
     {
-        if ($grade < 9 && empty($testimony)) {
-            throw new \DomainException('Depoimento obrigatório');
-        }
-
-        $this->feedbacks[] = [$grade, $testimony];
+        $this->feedbacks[] = $feedback;
     }
 
     public function addVideo(Video $video)
     {
-        if ($video->durationMinutes() < 3) {
+        if ($video->getDurationMinutes() < 3) {
             throw new \DomainException('Video muito curto');
         }
 
