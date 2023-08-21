@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class AluraMais extends Video implements ScoreInterface
+class AluraMais extends Video implements ScoreInterface, WatchInterface
 {
     private string $category;
     protected string $url = "http://mais.alura.com.br/";

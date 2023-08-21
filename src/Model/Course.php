@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class Course implements ScoreInterface
+class Course implements ScoreInterface, WatchInterface
 {
     private string $name;
     private array $videos;
