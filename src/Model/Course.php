@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class Course
+class Course implements ScoreInterface
 {
     private string $name;
     private array $videos;
@@ -36,4 +36,11 @@ class Course
     {
         return $this->videos;
     }
+
+    public function getScore(): float
+    {
+        return 100;
+    }
+
+
 }

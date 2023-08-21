@@ -4,17 +4,12 @@ namespace Alura\Solid\Service;
 
 use Alura\Solid\Model\AluraMais;
 use Alura\Solid\Model\Course;
+use Alura\Solid\Model\ScoreInterface;
 
 class ScoreCalculator
 {
-    public function getScore($conteudo)
+    public function getScore(ScoreInterface $content)
     {
-        if ($conteudo instanceof Course) {
-            return 100;
-        } else if ($conteudo instanceof AluraMais) {
-            return $conteudo->getDurationMinutes() * 2;
-        } else {
-            throw new \DomainException('Apenas Cursos e videos Alura+ possuem pontuações');
-        }
+        return $content->getScore();
     }
 }

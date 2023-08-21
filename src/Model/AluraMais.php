@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class AluraMais extends Video
+class AluraMais extends Video implements ScoreInterface
 {
     private string $category;
 
@@ -16,4 +16,11 @@ class AluraMais extends Video
     {
         return str_replace(' ', '-', strtolower($this->category));
     }
+
+    public function getScore(): float
+    {
+        return $this->getScore() * 2;
+    }
+
+
 }
