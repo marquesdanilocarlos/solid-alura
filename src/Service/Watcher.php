@@ -4,18 +4,12 @@ namespace Alura\Solid\Service;
 
 use Alura\Solid\Model\AluraMais;
 use Alura\Solid\Model\Course;
+use Alura\Solid\Model\ScoreInterface;
 
 class Watcher
 {
-    public function watchCourse(Course $course)
+    public function watch(ScoreInterface $content)
     {
-        foreach ($course->getVideos() as $video) {
-            $video->watch();
-        }
-    }
-
-    public function watchAluraMais(AluraMais $aluraMais)
-    {
-        $aluraMais->watch();
+        $content->watch();
     }
 }

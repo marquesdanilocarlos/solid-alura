@@ -13,3 +13,8 @@
 
 3 - Princípio de substituição de Liskov (Liskov Substitution Principle)
     - Deve-se fazer com que as classes filhas respeitem qualquer definição imposta pela classe base.
+
+5 - Princípio da Inversão de Dependência (Dependency Inversion Principle)
+    - Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender da abstração.
+    - Abstrações não devem depender de detalhes. Os detalhes devem depender das abstrações.
+    - As Classes concretas devem depender de abstrações e não o inverso

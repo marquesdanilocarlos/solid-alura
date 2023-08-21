@@ -42,5 +42,11 @@ class Course implements ScoreInterface
         return 100;
     }
 
+    public function watch(): void
+    {
+        foreach ($this->getVideos() as $video) {
+            $video->watch();
+        }
+    }
 
 }

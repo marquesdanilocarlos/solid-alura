@@ -23,5 +23,4 @@ class AluraMais extends Video implements ScoreInterface
         return $this->getScore() * 2;
     }
 
-
 }
